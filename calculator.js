@@ -68,12 +68,22 @@ window.onload =  function(event){
 		}
 	}
 
+	divBminus.onclick = function(event) {
+		console.log("Btn- was clicked.")
+
+		if( operation === "invalid" ) {
+			operation = "-";
+		}
+	}
+
 	divBenter.onclick = function(event) {
 		console.log("Btn enter was clicked.")
 
 		if( operation === "+" ) {
 			var result = operandA + operandB;
 			resultDisplay.innerHTML = result;
+		} else if (operation === "-") {
+			resultDisplay = operandA - operandB;
 		}
 	}
 
